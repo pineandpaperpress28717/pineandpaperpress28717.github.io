@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>asset</title>
+<style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}
+img{display:block;margin:0;position:absolute;top:0;left:0}</style></head>
+<body><img id="a" alt="asset">
+<script>
+var q=new URLSearchParams(location.search);
+var img=document.getElementById('a');
+img.src=q.get('src');
+function fit(){img.style.width=window.innerWidth+'px';img.style.height=window.innerHeight+'px';}
+img.onload=fit;window.addEventListener('resize',fit);fit();
+</script></body></html>
